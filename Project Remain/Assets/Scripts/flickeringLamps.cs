@@ -7,28 +7,28 @@ public class flickeringLamps : MonoBehaviour
 {
 
     public float fpsTargetDistance;
-    public float fpsTargetWanderingDistance;
+    //public float fpsTargetWanderingDistance;
 
-    public float fpsTargetFlyingDistance;
+    //public float fpsTargetFlyingDistance;
 
-    public float fpsTargetLongDistance;
+    //public float fpsTargetLongDistance;
 
-    public float fpsTargetWatchDistance;
+    //public float fpsTargetWatchDistance;
     public float enemyLookDistance;
-    public float enemyLookDistance2;
-    public float enemyLookDistance3;
-    public float enemyLookDistance4;
-    public float attackDistance;
-    public float enemyMovementSpeed;
+    //public float enemyLookDistance2;
+    //public float enemyLookDistance3;
+    //public float enemyLookDistance4;
+    //public float attackDistance;
+    //public float enemyMovementSpeed;
     public float damping;
 
     public Transform fpsTarget;
 
-    public Transform fpsTarget2;
+    //public Transform fpsTarget2;
 
-    public Transform fpsTarget3;
+    //public Transform fpsTarget3;
 
-    public Transform fpsTarget4;
+    //public Transform fpsTarget4;
 
     //public Transform fpsTarget5;
     public bool isFlickering;

@@ -42,11 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("left shift") && isGrounded)
         {
-            speed = 20f;
+            speed = 12f; //20
         }
         else
         {
-            speed = 12f;
+            speed = 6f; //12
         }
         velocity.y += gravity * Time.deltaTime;
 
