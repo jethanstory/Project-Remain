@@ -14,7 +14,7 @@ public class AdvancedWanderAI : MonoBehaviour
     public NavMeshAgent fpsTarget;
     // Start is called before the first frame update
 
-    [Range(0, 100)] public float speed;
+    [Range(0, 500)] public float speed; //100
     [Range(1, 500)] public float walkRadius;
     void Start()
     {

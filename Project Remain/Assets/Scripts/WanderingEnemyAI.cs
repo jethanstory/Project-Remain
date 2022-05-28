@@ -45,9 +45,9 @@ public class WanderingEnemyAI : MonoBehaviour
             
             if (fpsTargetDistance < attackDistance) {
                 //GameObject.Find("WanderingEnemy").GetComponent<FollowingEnemy>().enabled = false;
-                //GameObject.Find("WanderingEnemy").GetComponent<AttackPlayer>().enabled = true;
+                GameObject.Find("WanderingEnemy").GetComponent<AttackPlayer>().enabled = true;
                 //myRenderer.material.color = Color.red;
-                attackPlease();
+                //attackPlease();
             }
         }
         

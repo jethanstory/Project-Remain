@@ -15,8 +15,9 @@ public class AttackPlayer : MonoBehaviour
 
     // Start is called before the first frame update
 
-    [Range(0, 100)] public float speed;
+    [Range(0, 500)] public float speed; //100
     [Range(1, 500)] public float walkRadius;
+    [Range(0, 500)] public float acceleration; //100
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -24,6 +25,7 @@ public class AttackPlayer : MonoBehaviour
         if (agent != null)
         {
             agent.speed = speed;
+            agent.acceleration = acceleration;
             agent.SetDestination(player.position);
         }
     }

@@ -564,7 +564,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66386416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.205589
   m_Speed: 3.5
@@ -3959,8 +3959,9 @@ MonoBehaviour:
   agent: {fileID: 1907298984}
   fpsTarget: {fileID: 0}
   player: {fileID: 775212496}
-  speed: 100
+  speed: 500
   walkRadius: 1
+  acceleration: 500
 --- !u!1 &1978241701
 GameObject:
   m_ObjectHideFlags: 0
