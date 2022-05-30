@@ -43,7 +43,7 @@ public class ThrowingObject : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
 
         {
-            //Destroy(flare);
+            Destroy(flare);
 
             //rb.AddForce(new Vector3(0,15,15), ForceMode.Impulse);// used to apply force 
 
