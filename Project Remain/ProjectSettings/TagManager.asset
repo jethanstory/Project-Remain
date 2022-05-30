@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PickUp
+  - destroyObject
   layers:
   - Default
   - TransparentFX

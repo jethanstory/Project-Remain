@@ -13,14 +13,17 @@ public class PickUpObject : MonoBehaviour
     bool hasItem; // a bool to see if you have an item in your hand
 
 
-    public Collider sphereColl;
+    public GameObject flare;
+
+
+    //public Collider sphereColl;
     // Start is called before the first frame update
     void Start()
     {
         canpickup = false;    //setting both to false
         hasItem = false;
 
-        sphereColl = GetComponent<Collider>();
+        //sphereColl = GetComponent<Collider>();
     }
     
  
@@ -32,13 +35,17 @@ public class PickUpObject : MonoBehaviour
             Debug.Log("HIT");
 
 
-                sphereColl.enabled = !sphereColl.enabled;
+                //sphereColl.enabled = !sphereColl.enabled;
             //if (Input.GetKeyDown("e"))  // can be e or any key
             //{
-                ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
-                ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position
-                ObjectIwantToPickUp.transform.rotation = myHands.transform.rotation; // sets the position of the object to your hand position
-                ObjectIwantToPickUp.transform.parent = myHands.transform; //makes the object become a child of the parent so that it moves with the hands
+                Destroy(flare);
+
+                GameObject.Find("playerBody").GetComponent<ThrowingObject>().enabled = true;
+
+                //ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
+                //ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position
+                //ObjectIwantToPickUp.transform.rotation = myHands.transform.rotation; // sets the position of the object to your hand position
+                //ObjectIwantToPickUp.transform.parent = myHands.transform; //makes the object become a child of the parent so that it moves with the hands
                 
             //}
         }
