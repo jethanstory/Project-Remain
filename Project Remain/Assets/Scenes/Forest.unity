@@ -337,6 +337,7 @@ Transform:
   m_Children:
   - {fileID: 1672964044}
   - {fileID: 1615129181}
+  - {fileID: 565427047}
   m_Father: {fileID: 775212496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1287,6 +1288,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a74e5a6b8afe5584dadf77a4a2245e84, type: 3}
+--- !u!1 &565427046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565427047}
+  m_Layer: 0
+  m_Name: zeHandsRadio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565427047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565427046}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.31600952, y: -0.25799942, z: 0.50250244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 55351657}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &699805990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,9 +2367,38 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
+--- !u!135 &1046831782
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046831780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: -0.010270499, y: 0.358014, z: 0.018380493}
+--- !u!54 &1046831783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046831780}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1069465651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2904,6 +2964,7 @@ GameObject:
   - component: {fileID: 1232699255}
   - component: {fileID: 1232699256}
   - component: {fileID: 1232699257}
+  - component: {fileID: 1232699258}
   m_Layer: 0
   m_Name: playerBody
   m_TagString: Untagged
@@ -3038,6 +3099,20 @@ MonoBehaviour:
   - {fileID: 1498770033}
   - {fileID: 1282340061}
   - {fileID: 1469425027}
+--- !u!114 &1232699258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232699250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6726bfce14c01c8478a608cd4a741663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myHands: {fileID: 565427046}
+  radio: {fileID: 1046831780}
 --- !u!1 &1282340061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,6 +3438,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
       propertyPath: m_Name
       value: two_way_radio_proto
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
+      propertyPath: m_Name
+      value: default_two_way_radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
+      propertyPath: m_TagString
+      value: PickUpRadio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
@@ -8526,6 +8609,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_Name
       value: flare_proto_static
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_LocalPosition.x
