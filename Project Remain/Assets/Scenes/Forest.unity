@@ -3439,6 +3439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: two_way_radio_proto
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 542d437e32c302745bf4b87a56aeb157, type: 3}
       propertyPath: m_Name
       value: default_two_way_radio
@@ -9024,7 +9028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615129180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31600952, y: -0.25799942, z: 0.50250244}
+  m_LocalPosition: {x: -0.2, y: -0.25799942, z: 0.50250244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55351657}
