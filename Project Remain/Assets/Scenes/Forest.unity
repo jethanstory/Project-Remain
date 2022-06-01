@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 66386423}
   - component: {fileID: 66386425}
   - component: {fileID: 66386426}
+  - component: {fileID: 66386427}
   m_Layer: 0
   m_Name: longOne
   m_TagString: Untagged
@@ -559,7 +560,7 @@ MonoBehaviour:
   agent: {fileID: 66386424}
   fpsTarget: {fileID: 0}
   player: {fileID: 775212496}
-  speed: 3
+  speed: 10
   walkRadius: 100
 --- !u!195 &66386424
 NavMeshAgent:
@@ -740,6 +741,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &66386427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66386416}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d588e607f4fcbad49a3c366c38ff6b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damping: 100
+  agent: {fileID: 66386424}
+  fpsTarget: {fileID: 0}
+  player: {fileID: 775212496}
+  speed: 500
+  walkRadius: 1
+  acceleration: 500
 --- !u!1 &95515859
 GameObject:
   m_ObjectHideFlags: 0
