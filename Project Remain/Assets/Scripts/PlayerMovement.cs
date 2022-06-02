@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("left shift") && isGrounded)
         {
-            speed = 12f; //20
+            speed = 10f; //20
         }
         else
         {
