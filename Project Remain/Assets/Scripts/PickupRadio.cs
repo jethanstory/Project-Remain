@@ -26,7 +26,7 @@ public class PickupRadio : MonoBehaviour
     {
         if(canpickup == true) // if you enter thecollider of the objecct
         {
-            Debug.Log("HIT");
+            //Debug.Log("HIT");
 
 
                 //sphereColl.enabled = !sphereColl.enabled;

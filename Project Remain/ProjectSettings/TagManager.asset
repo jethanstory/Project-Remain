@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - destroyObject
   - PickUpRadio
+  - thrownFlare
   layers:
   - Default
   - TransparentFX
