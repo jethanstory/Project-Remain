@@ -26,7 +26,7 @@ using UnityEngine.AI;
          myNMagent = GetComponent<NavMeshAgent> ();
          canRun = false;
 
-         myNMagent.speed = speed;
+         
  
          RunFrom ();
      }
@@ -39,8 +39,13 @@ using UnityEngine.AI;
  
          // used for testing - can be ignored
             if(Time.time > nextTurnTime)
+                myNMagent.speed = speed;
+                GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = false;
+                GameObject.Find("WanderingEnemy").GetComponent<FollowingEnemy>().enabled = false;
+                GameObject.Find("WanderingEnemy").GetComponent<AttackPlayer>().enabled = false;
                 RunFrom();
         }
+       
      
      }
  /*
