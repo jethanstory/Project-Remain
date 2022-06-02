@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
  
- public class NavMeshRun : MonoBehaviour {
+ public class NavMeshRunLong : MonoBehaviour {
  
      //private Transform player;
      private NavMeshAgent myNMagent;
@@ -40,10 +40,10 @@ using UnityEngine.AI;
          // used for testing - can be ignored
             if(Time.time > nextTurnTime)
                 myNMagent.speed = speed;
-                GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = false;
-                GameObject.Find("WanderingEnemy").GetComponent<FollowingEnemy>().enabled = false;
-                GameObject.Find("WanderingEnemy").GetComponent<AttackPlayer>().enabled = false;
-                GameObject.Find("WanderingEnemy").GetComponent<WanderingEnemyAI>().enabled = false;
+                GameObject.Find("longOne").GetComponent<AdvancedWanderAI>().enabled = false;
+                GameObject.Find("longOne").GetComponent<FollowingEnemy>().enabled = false;
+                GameObject.Find("longOne").GetComponent<AttackPlayer>().enabled = false;
+                GameObject.Find("longOne").GetComponent<enemyAInoLight>().enabled = false;
                 RunFrom();
         }
        

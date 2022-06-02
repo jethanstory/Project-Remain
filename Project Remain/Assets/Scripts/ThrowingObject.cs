@@ -23,10 +23,14 @@ public class ThrowingObject : MonoBehaviour
     public Light light2;
     public Light light3;
 
+    public AudioSource audioSource;
+
     // Update is called once per frame
 
     public GameObject[] lights;
     private bool lightEnabled;
+    public GameObject[] sounds;
+
 
 
 
@@ -68,8 +72,15 @@ public class ThrowingObject : MonoBehaviour
         GameObject flareInstance = Instantiate(flare, spawnPoint.position, spawnPoint.rotation);
         flareInstance.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * range, ForceMode.Impulse);
         flareInstance.GetComponent <ParticleSystem>().Play ();
+        //flareInstance.GetComponent <AudioSource>().Play ();
+
         ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
         //light = flareInstance.GetComponent <Light>();
+
+        //audioSource = flareInstance.GetComponent<AudioSource>();
+
+        //audioSource.SetActive(lightEnabled);
+        //audioSource.Play();
         em.enabled = true;
 
         lightEnabled = !lightEnabled;
@@ -78,9 +89,20 @@ public class ThrowingObject : MonoBehaviour
         {
             light.SetActive(lightEnabled);
         }
+
+        //foreach (var audioSource in sounds)
+        //{
+          //  audioSource.SetActive(lightEnabled);
+        //}
+
+        
         //light.enabled = true;
         //light2.enabled = true;
         //light3.enabled = true;
+
+
+
+
 
 
     }

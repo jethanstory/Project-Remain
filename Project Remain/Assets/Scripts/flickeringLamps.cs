@@ -39,6 +39,8 @@ public class flickeringLamps : MonoBehaviour
 
     public Light light;
 
+     private float restartIn = 1f;
+
 
     
     public float RandomIntensity;
@@ -81,6 +83,9 @@ public class flickeringLamps : MonoBehaviour
             StartCoroutine(FlickerLight());
         }
         */
+        else {
+            light.intensity = restartIn;
+    }
 
     }
 
