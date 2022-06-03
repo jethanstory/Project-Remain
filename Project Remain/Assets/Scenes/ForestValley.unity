@@ -9445,6 +9445,7 @@ MonoBehaviour:
   lightSource: {fileID: 993726485}
   fpsTarget: {fileID: 1397404247}
   fpsWanderTarget: {fileID: 107770691}
+  lights: []
 --- !u!114 &1514021284
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,12 @@ public class WanderingEnemyAI : MonoBehaviour
     Rigidbody theRigidBody;
     //Renderer myRenderer;
 
+    private bool lightEnabled;
+    //public GameObject[] sounds;
+    public GameObject[] lights;
+
+    //public AudioSource audioSource;
+
     
 
     //private Light enemyLight;
@@ -67,6 +73,11 @@ public class WanderingEnemyAI : MonoBehaviour
     void lookAtPlayer() {
         Quaternion rotation = Quaternion.LookRotation(fpsTarget.position - transform.position);
         transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * damping);
+
+        foreach (var light in lights)
+            {
+                light.SetActive(lightEnabled);
+            }
          
 
             /*else if (isOn == true)
