@@ -3870,20 +3870,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1615129181}
   flare: {fileID: 1375982422}
-  rb: {fileID: 0}
-  part: {fileID: 0}
-  light: {fileID: 1498770035}
-  light2: {fileID: 1282340063}
-  light3: {fileID: 1940844799}
-  audioSource: {fileID: 0}
+  myHands: {fileID: 1615129180}
   lights:
   - {fileID: 1736781210}
   - {fileID: 1940844797}
   - {fileID: 1498770033}
   - {fileID: 1282340061}
   - {fileID: 1469425027}
-  sounds:
-  - {fileID: 1736781210}
+  canThrow: 0
+  ObjectIwantToPickUp: {fileID: 1375982422}
 --- !u!114 &1232699258
 MonoBehaviour:
   m_ObjectHideFlags: 0

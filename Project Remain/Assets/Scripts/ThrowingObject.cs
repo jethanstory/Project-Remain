@@ -15,21 +15,27 @@ public class ThrowingObject : MonoBehaviour
 
     float range = 15f;
 
-    public Rigidbody rb;
+    public GameObject myHands; //reference to your hands/the position where you want your object to go
 
-    public ParticleSystem part;
+    //public Rigidbody rb;
 
-    public Light light;
-    public Light light2;
-    public Light light3;
+    //public ParticleSystem part;
 
-    public AudioSource audioSource;
+    //public Light light;
+    //public Light light2;
+    //public Light light3;
+
+    //public AudioSource audioSource;
 
     // Update is called once per frame
 
     public GameObject[] lights;
     private bool lightEnabled;
-    public GameObject[] sounds;
+    //public GameObject[] sounds;
+
+    public bool canThrow;
+
+    public GameObject ObjectIwantToPickUp; // the gameobject onwhich you collided with
 
 
 
@@ -38,13 +44,14 @@ public class ThrowingObject : MonoBehaviour
         //light = GetComponent<Light> ();
         //light2 = GetComponent<Light> ();
         //light3 = GetComponent<Light> ();
+        canThrow = true;
     }
 
     void FixedUpdate()
 
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canThrow == true)
 
         {
             Destroy(flare);
@@ -53,6 +60,7 @@ public class ThrowingObject : MonoBehaviour
 
             //Invoke("delay", 4f);//it is used to create delay in destroying the game object 
             Launch();
+            canThrow = false;
 
         }
 
@@ -68,6 +76,7 @@ public class ThrowingObject : MonoBehaviour
     }
     private void Launch()
     {
+        
         flare.transform.SetParent(null);
         GameObject flareInstance = Instantiate(flare, spawnPoint.position, spawnPoint.rotation);
         flareInstance.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * range, ForceMode.Impulse);
@@ -89,7 +98,15 @@ public class ThrowingObject : MonoBehaviour
         {
             light.SetActive(lightEnabled);
         }
-
+        
+        
+        /*
+        //ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
+        ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position
+        ObjectIwantToPickUp.transform.rotation = myHands.transform.rotation; // sets t
+        ObjectIwantToPickUp.GetComponent<Rigidbody>().useGravity = true;
+        ObjectIwantToPickUp.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * range, ForceMode.Impulse);
+        */
         //foreach (var audioSource in sounds)
         //{
           //  audioSource.SetActive(lightEnabled);
