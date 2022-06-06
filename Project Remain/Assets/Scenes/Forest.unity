@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &66386417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 14fd381e20facd1418015bb120288192, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14fd381e20facd1418015bb120288192, type: 3}
       propertyPath: m_LocalScale.x
@@ -1472,12 +1472,12 @@ GameObject:
   - component: {fileID: 654682900}
   - component: {fileID: 654682901}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Point Light_old_lamppost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &654682900
 Transform:
   m_ObjectHideFlags: 0
@@ -2593,7 +2593,7 @@ GameObject:
   - component: {fileID: 789131257}
   - component: {fileID: 789131258}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Area Light_Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3506,8 +3506,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1119353018}
   - component: {fileID: 1119353019}
+  - component: {fileID: 1119353020}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Spot Light_old_lamppost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3589,6 +3590,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!122 &1119353020
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119353017}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286644211
+  m_Size: 1
 --- !u!1001 &1119815401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3885,6 +3898,7 @@ GameObject:
   - component: {fileID: 1208037740}
   - component: {fileID: 1208037739}
   - component: {fileID: 1208037738}
+  - component: {fileID: 1208037743}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -3989,6 +4003,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1208037743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208037737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf89543327eeff4e93f59bb933e1b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsTargetDistance: 30
+  enemyLookDistance: 20
+  damping: 5
+  fpsTarget: {fileID: 66386422}
+  isFlickering: 1
+  FlickerMode: 1
+  FlickerTime: 0
+  lightSource: {fileID: 789131255}
+  light: {fileID: 789131257}
+  RandomIntensity: 0
 --- !u!1 &1232699250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,6 +4544,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371582604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 14fd381e20facd1418015bb120288192, type: 3}
+  m_PrefabInstance: {fileID: 187369334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371582605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371582604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf89543327eeff4e93f59bb933e1b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsTargetDistance: 30
+  enemyLookDistance: 20
+  damping: 5
+  fpsTarget: {fileID: 66386422}
+  isFlickering: 1
+  FlickerMode: 1
+  FlickerTime: 0
+  lightSource: {fileID: 1119353017}
+  light: {fileID: 1119353019}
+  RandomIntensity: 0
+--- !u!114 &1371582606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371582604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf89543327eeff4e93f59bb933e1b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsTargetDistance: 30
+  enemyLookDistance: 20
+  damping: 5
+  fpsTarget: {fileID: 66386422}
+  isFlickering: 1
+  FlickerMode: 1
+  FlickerTime: 0
+  lightSource: {fileID: 0}
+  light: {fileID: 0}
+  RandomIntensity: 0
 --- !u!1001 &1372138912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15776,7 +15861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1907298977
 MonoBehaviour:
   m_ObjectHideFlags: 0
