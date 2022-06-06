@@ -1570,7 +1570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &699805991
 Transform:
   m_ObjectHideFlags: 0
@@ -3413,8 +3413,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1107471668}
   - component: {fileID: 1107471669}
+  - component: {fileID: 1107471670}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Point Light_Lamp_Proto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3496,6 +3497,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!122 &1107471670
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107471667}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4289130237
+  m_Size: 0.5
 --- !u!1 &1119353017
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,3 +17019,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e53d809889a8474bade56c084723a78, type: 3}
   m_PrefabInstance: {fileID: 2115660899}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2115660906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115660900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf89543327eeff4e93f59bb933e1b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsTargetDistance: 30
+  enemyLookDistance: 20
+  damping: 5
+  fpsTarget: {fileID: 66386422}
+  isFlickering: 1
+  FlickerMode: 1
+  FlickerTime: 0
+  lightSource: {fileID: 1107471667}
+  light: {fileID: 1107471669}
+  RandomIntensity: 0
