@@ -1522,7 +1522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78c919409601094f98d47b315cf5f21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.823
+      value: 41.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f78c919409601094f98d47b315cf5f21, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1559,7 +1559,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: f78c919409601094f98d47b315cf5f21, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35b3905e878c7c14a804d8e50b2f37d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 6c096acbd65465b438d9b0a3d141cff1, type: 2}
     - target: {fileID: 919132149155446097, guid: f78c919409601094f98d47b315cf5f21, type: 3}
       propertyPath: m_Name
       value: nissen_hut_proto_cut_base
@@ -5006,7 +5006,7 @@ Light:
   m_Color: {r: 0.9529412, g: 1, b: 0.5019608, a: 1}
   m_Intensity: 1
   m_Range: 25
-  m_SpotAngle: 120
+  m_SpotAngle: 110
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
@@ -18849,15 +18849,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.27
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.27
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.27
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18910,6 +18910,10 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: fce24e7966387564394691cd78164b10, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fce24e7966387564394691cd78164b10, type: 3}
