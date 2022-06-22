@@ -39,7 +39,7 @@ public class flickeringLamps : MonoBehaviour
 
     public Light light;
 
-     private float restartIn = 1f;
+     private float restartIn = 1f; //1
 
 
     
