@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.1
     agentHeight: 2
     agentSlope: 51.3
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -23320,7 +23320,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 7.2153854
+  m_Radius: 3.215385
   m_Height: 24.29179
   m_Direction: 1
   m_Center: {x: 1.4073944, y: -8.89535, z: 3.6024857}
@@ -23398,7 +23398,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1907298976}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 8.923996
+  m_Radius: 2.923996
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
