@@ -36,7 +36,7 @@ public class ThrowingObject : MonoBehaviour
     private bool lightEnabled;
     //public GameObject[] sounds;
 
-    public bool canThrow;
+    //public bool canThrow;
 
     public GameObject ObjectIwantToPickUp; // the gameobject onwhich you collided with
 
@@ -52,7 +52,7 @@ public class ThrowingObject : MonoBehaviour
         //light = GetComponent<Light> ();
         //light2 = GetComponent<Light> ();
         //light3 = GetComponent<Light> ();
-        canThrow = false;
+        //canThrow = false;
         canpickup = false;    //setting both to false
         hasItem = false;
     }
@@ -82,7 +82,7 @@ public class ThrowingObject : MonoBehaviour
 
         
     }
-    
+
     private void throwCheck()
 
     {
