@@ -30,6 +30,8 @@ public class ThrowingObject : MonoBehaviour
 
     // Update is called once per frame
 
+    public int flareCount = 0;
+
     public GameObject[] lights;
     private bool lightEnabled;
     //public GameObject[] sounds;
@@ -61,11 +63,13 @@ public class ThrowingObject : MonoBehaviour
         throwCheck();
         
 
-        if (canThrow == true) {
+        if (flareCount > 0) { //canThrow == true
             if (Input.GetMouseButtonDown(0)) // && canThrow == true
 
             {
-            canThrow = false;
+            flareCount -= 1; //flareCount
+            //canThrow = false;
+
             //Destroy(flare);
 
             //rb.AddForce(new Vector3(0,15,15), ForceMode.Impulse);// used to apply force 
@@ -73,21 +77,21 @@ public class ThrowingObject : MonoBehaviour
             //Invoke("delay", 4f);//it is used to create delay in destroying the game object 
             Launch();
             
-
-
             }
         }
 
         
     }
-
+    
     private void throwCheck()
 
     {
         if(canpickup == true) // if you enter thecollider of the objecct
         {
             Destroy(staticFlare);
-            canThrow = true;
+            //canThrow = true;
+            
+            //flareCount += 1;
         }
     }
 
@@ -156,6 +160,7 @@ public class ThrowingObject : MonoBehaviour
         {
             canpickup = true;  //set the pick up bool to true
             ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
+            flareCount += 1;
         }
     }
     private void OnTriggerExit(Collider other)
