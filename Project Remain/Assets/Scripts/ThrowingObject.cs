@@ -88,7 +88,7 @@ public class ThrowingObject : MonoBehaviour
     {
         if(canpickup == true) // if you enter thecollider of the objecct
         {
-            Destroy(staticFlare);
+            //Destroy(staticFlare);
             //canThrow = true;
             
             //flareCount += 1;
@@ -161,6 +161,7 @@ public class ThrowingObject : MonoBehaviour
             canpickup = true;  //set the pick up bool to true
             ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
             flareCount += 1;
+            Destroy(ObjectIwantToPickUp);
         }
     }
     private void OnTriggerExit(Collider other)
