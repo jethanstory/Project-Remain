@@ -12,6 +12,7 @@ public class ThrowingObject : MonoBehaviour
 
     public Transform spawnPoint;
     public GameObject flare;
+    public GameObject staticFlare;
 
     float range = 15f;
 
@@ -39,31 +40,55 @@ public class ThrowingObject : MonoBehaviour
 
 
 
+    bool canpickup; //a bool to see if you can or cant pick up the item
+    bool hasItem; // a bool to see if you have an item in your hand
+
+
+
 
     void Start () {
         //light = GetComponent<Light> ();
         //light2 = GetComponent<Light> ();
         //light3 = GetComponent<Light> ();
-        canThrow = true;
+        canThrow = false;
+        canpickup = false;    //setting both to false
+        hasItem = false;
     }
 
-    void FixedUpdate()
+    void FixedUpdate() //FixedUpdate()
 
     {
+        throwCheck();
+        
 
-        if (Input.GetMouseButtonDown(0) && canThrow == true)
+        if (canThrow == true) {
+            if (Input.GetMouseButtonDown(0)) // && canThrow == true
 
-        {
-            Destroy(flare);
+            {
+            canThrow = false;
+            //Destroy(flare);
 
             //rb.AddForce(new Vector3(0,15,15), ForceMode.Impulse);// used to apply force 
 
             //Invoke("delay", 4f);//it is used to create delay in destroying the game object 
             Launch();
-            canThrow = false;
+            
 
+
+            }
         }
 
+        
+    }
+
+    private void throwCheck()
+
+    {
+        if(canpickup == true) // if you enter thecollider of the objecct
+        {
+            Destroy(staticFlare);
+            canThrow = true;
+        }
     }
 
     public void delay() // whenever this function is called the object gets destroyed
@@ -100,6 +125,7 @@ public class ThrowingObject : MonoBehaviour
         }
         
         
+        
         /*
         //ObjectIwantToPickUp.GetComponent<Rigidbody>().isKinematic = true;   //makes the rigidbody not be acted upon by forces
         ObjectIwantToPickUp.transform.position = myHands.transform.position; // sets the position of the object to your hand position
@@ -124,4 +150,17 @@ public class ThrowingObject : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other) // to see when the player enters the collider
+    {
+        if(other.gameObject.tag == "PickUp") //on the object you want to pick up set the tag to be anything, in this case "object"
+        {
+            canpickup = true;  //set the pick up bool to true
+            ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        canpickup = false; //when you leave the collider set the canpickup bool to false
+     
+    }
 }

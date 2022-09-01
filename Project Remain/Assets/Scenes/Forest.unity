@@ -10834,7 +10834,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232699250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06dbf506404cbb245a5f1aae4329b8da, type: 3}
   m_Name: 
@@ -10848,13 +10848,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232699250}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 573192cb8df396049b530434bfaa515f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1615129181}
   flare: {fileID: 1375982422}
+  staticFlare: {fileID: 1486240320}
   myHands: {fileID: 1615129180}
   lights:
   - {fileID: 1736781210}
