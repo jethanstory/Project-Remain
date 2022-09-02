@@ -15,8 +15,8 @@ public class AdvancedWanderAI : MonoBehaviour
     // Start is called before the first frame update
 
     //public float targetTime = 10.0f;
-    public bool timerStarted = false;
-    public float timer = 0.0f;
+    //public bool timerStarted = false;
+    //public float timer = 0.0f;
 
     [Range(0, 500)] public float speed; //100
     [Range(1, 500)] public float walkRadius;
@@ -52,33 +52,6 @@ public class AdvancedWanderAI : MonoBehaviour
             agent.SetDestination(RandomNavMeshLocation());
             //Debug.Log("FOUND!");
         }
-
-        else if (agent.velocity.magnitude > 10) //agent.velocity.magnitude < 0.16f
-        {
-            if(!timerStarted)
-            {
-                timerStarted = true;
-                timer = 0.0f;
-            }
-            else
-            {
-                timer += Time.deltaTime;
-            }
-            if(timer >= 10.0f)
-            {
-                agent.enabled = false;
-                agent.enabled = true;
-                agent.SetDestination(RandomNavMeshLocation());
-                timerStarted = false;
-                timer = 0.0f;
-            }
-            
-            else
-            {
-                timerStarted = false;
-            }
-        }
-        
         
         //agent.SetDestination(fpsTarget)
 

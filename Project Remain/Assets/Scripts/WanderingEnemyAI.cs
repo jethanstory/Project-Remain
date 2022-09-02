@@ -26,6 +26,9 @@ public class WanderingEnemyAI : MonoBehaviour
     //public GameObject[] sounds;
     public GameObject[] lights;
 
+    //public bool timerStarted = true;
+    public float timer = 0.0f;
+
     //public AudioSource audioSource;
 
     //private Light enemyLight;
@@ -39,6 +42,7 @@ public class WanderingEnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //resetSystem();
         fpsTargetDistance = Vector3.Distance(fpsTarget.position, transform.position);
         if (fpsTargetDistance < enemyLookDistance) {
             //myRenderer.material.color = Color.yellow;
@@ -58,9 +62,11 @@ public class WanderingEnemyAI : MonoBehaviour
         }
         
         else{
-            
+
             GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = true;
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            
+            
             //Wander to player position
             //WandertoPlacePlease();
 
@@ -70,11 +76,37 @@ public class WanderingEnemyAI : MonoBehaviour
         }
     }
 
-    //void resetSystem()
-    //{
-
-        //if (if stuckCheck)
-    //}
+    void resetSystem()
+    {
+       // if(!timerStarted)
+        //{
+        //    timerStarted = true;
+        //    timer = 0.0f;
+        //}
+        //else
+        //{
+        timer += Time.deltaTime;
+        //}
+        if(timer >= 5.0f)
+        {
+            GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = false;
+            GameObject.Find("WanderingEnemy").GetComponent<FixerFollow>().enabled = true;
+            //timerStarted = false;
+            if(timer >= 7.0f)
+            {
+                timer = 0.0f;
+                GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = true;
+                GameObject.Find("WanderingEnemy").GetComponent<FixerFollow>().enabled = false;
+            }
+            
+        }
+            
+        //else
+        //{
+        //    timerStarted = false;
+        //}
+        
+    }
 
     void lookAtPlayer() {
         Quaternion rotation = Quaternion.LookRotation(fpsTarget.position - transform.position);
