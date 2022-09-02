@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.1
     agentHeight: 2
-    agentSlope: 51.3
+    agentSlope: 60
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66386416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcc4e35589bac8c45a8a33edfbcd8c6a, type: 3}
   m_Name: 
@@ -1084,7 +1084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 66386424}
-  fpsTarget: {fileID: 0}
   speed: 10
   walkRadius: 200
 --- !u!82 &66386426
@@ -9065,7 +9064,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1907298984}
-  fpsTarget: {fileID: 0}
   speed: 10
   walkRadius: 100
 --- !u!54 &829097276
@@ -23442,7 +23440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907298976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18771253ca293b84bba4cea0c6a5f515, type: 3}
   m_Name: 
@@ -23602,7 +23600,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1907298984}
-  fpsTarget: {fileID: 0}
   speed: 3
   walkRadius: 200
 --- !u!114 &1907298986

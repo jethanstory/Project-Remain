@@ -18,6 +18,8 @@ public class WanderingEnemyAI : MonoBehaviour
     public Transform fpsTarget;
     public Transform fpsWanderTarget;
     Rigidbody theRigidBody;
+
+    //public Transform stuckCheck;
     //Renderer myRenderer;
 
     private bool lightEnabled;
@@ -25,8 +27,6 @@ public class WanderingEnemyAI : MonoBehaviour
     public GameObject[] lights;
 
     //public AudioSource audioSource;
-
-    
 
     //private Light enemyLight;
     // Start is called before the first frame update
@@ -69,6 +69,12 @@ public class WanderingEnemyAI : MonoBehaviour
           
         }
     }
+
+    //void resetSystem()
+    //{
+
+        //if (if stuckCheck)
+    //}
 
     void lookAtPlayer() {
         Quaternion rotation = Quaternion.LookRotation(fpsTarget.position - transform.position);
