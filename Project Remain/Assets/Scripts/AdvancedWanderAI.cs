@@ -43,7 +43,7 @@ public class AdvancedWanderAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update() //FixedUpdate()
     {
         if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
         {
@@ -52,14 +52,6 @@ public class AdvancedWanderAI : MonoBehaviour
             agent.SetDestination(RandomNavMeshLocation());
             //Debug.Log("FOUND!");
         }
-        /*
-         else if (agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathComplete) {
-            Debug.Log("Character stuck");
-            agent.enabled = false;
-            agent.enabled = true;
-            Debug.Log("navmesh re enabled");
-        }
-         */
 
         else if (agent.velocity.magnitude > 10) //agent.velocity.magnitude < 0.16f
         {
