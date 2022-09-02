@@ -1084,8 +1084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 66386424}
-  timerStarted: 0
-  timer: 0
   speed: 10
   walkRadius: 200
 --- !u!82 &66386426
@@ -9235,8 +9233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1907298984}
-  timerStarted: 0
-  timer: 0
   speed: 10
   walkRadius: 100
 --- !u!54 &829097276
@@ -23759,7 +23755,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 25
-  m_BaseOffset: 22
+  m_BaseOffset: 23
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1907298985
@@ -23775,8 +23771,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1907298984}
-  timerStarted: 0
-  timer: 0
   speed: 3
   walkRadius: 100
 --- !u!114 &1907298986
