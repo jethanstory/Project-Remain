@@ -31,6 +31,7 @@ public class ThrowingObject : MonoBehaviour
     // Update is called once per frame
 
     public int flareCount = 0;
+    //public AudioSource audio;
 
     public GameObject[] lights;
     private bool lightEnabled;
@@ -55,6 +56,7 @@ public class ThrowingObject : MonoBehaviour
         //canThrow = false;
         canpickup = false;    //setting both to false
         hasItem = false;
+        //audio = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() //FixedUpdate()
@@ -88,6 +90,7 @@ public class ThrowingObject : MonoBehaviour
     {
         if(canpickup == true) // if you enter thecollider of the objecct
         {
+            //audio.Play(); //Play it
             //Destroy(staticFlare);
             //canThrow = true;
             
