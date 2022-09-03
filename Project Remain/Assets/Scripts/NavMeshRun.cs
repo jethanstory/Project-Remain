@@ -126,4 +126,6 @@ using UnityEngine.AI;
             //ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
         }
     }
+
+    //maybe on trigger leave, wait for an amount of time and then renable the disabled stuff above!!
 }
