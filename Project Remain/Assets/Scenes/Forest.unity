@@ -577,7 +577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 14fd381e20facd1418015bb120288192, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14fd381e20facd1418015bb120288192, type: 3}
       propertyPath: m_LocalScale.x
@@ -1514,7 +1514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2222,7 +2222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444252265
 GameObject:
@@ -2661,7 +2661,7 @@ GameObject:
   - component: {fileID: 588892068}
   - component: {fileID: 588892067}
   m_Layer: 0
-  m_Name: Lamp (1)
+  m_Name: TallLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2784,7 +2784,7 @@ Transform:
   - {fileID: 1568090675}
   - {fileID: 18247841}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
 --- !u!1 &633772685
 GameObject:
@@ -2815,7 +2815,7 @@ Transform:
   m_Children:
   - {fileID: 1831487724}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654682899
 GameObject:
@@ -17394,7 +17394,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6c8ed1466c1b3c499b670142d97273b, type: 3}
       propertyPath: m_LocalScale.x
@@ -25111,7 +25111,7 @@ Transform:
   - {fileID: 358190467}
   - {fileID: 2096161650}
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2096161649
 PrefabInstance:
