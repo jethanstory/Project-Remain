@@ -24957,6 +24957,10 @@ PrefabInstance:
       value: 8.56
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: fce24e7966387564394691cd78164b10, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: fce24e7966387564394691cd78164b10, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
