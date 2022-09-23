@@ -936,7 +936,7 @@ MonoBehaviour:
   attackDistance: 15
   enemyMovementSpeed: 100
   damping: 50
-  enemyWarningDistance: 50
+  enemyWarningDistance: 60
   sound: {fileID: 748955487}
   fpsTarget: {fileID: 775212496}
   isOn: 0
