@@ -12,6 +12,10 @@ public class enemyAInoLight : MonoBehaviour
     public float enemyMovementSpeed;
     public float damping;
 
+    public float enemyWarningDistance;
+    public GameObject sound;
+
+
     //public GameObject lightSource;
     public Transform fpsTarget;
     Rigidbody theRigidBody;
@@ -42,6 +46,16 @@ public class enemyAInoLight : MonoBehaviour
                 GameObject.Find("longOne").GetComponent<AttackPlayer>().enabled = true;
                 //attackPlease();
             }
+        }
+        else if (fpsTargetDistance < enemyWarningDistance)
+        {
+            //GameObject.Find("playerBody").GetComponent<ThrowingObject>().enabled = true;
+            sound.SetActive(true);
+        }
+
+        else if (enemyWarningDistance < fpsTargetDistance)
+        {
+            sound.SetActive(false);
         }
         
         else{
