@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: d985ccf05f4ffd8458d6e1fbe747a70d, type: 2}
 --- !u!1001 &9761524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11990,7 +11990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!154 &1371064749
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -25727,7 +25727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!154 &2037087292
 TerrainCollider:
   m_ObjectHideFlags: 0
