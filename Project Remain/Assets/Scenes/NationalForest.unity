@@ -954,7 +954,7 @@ MonoBehaviour:
   enemyMovementSpeed: 100
   damping: 50
   enemyWarningDistance: 60
-  enemyHeartbeatDistance: 20
+  enemyHeartbeatDistance: 30
   sound: {fileID: 748955487}
   heartSound: {fileID: 328359442}
   fpsTarget: {fileID: 775212496}
