@@ -13,7 +13,9 @@ public class enemyAInoLight : MonoBehaviour
     public float damping;
 
     public float enemyWarningDistance;
+    public float enemyHeartbeatDistance;
     public GameObject sound;
+    public GameObject heartSound;
 
 
     //public GameObject lightSource;
@@ -52,10 +54,17 @@ public class enemyAInoLight : MonoBehaviour
             //GameObject.Find("playerBody").GetComponent<ThrowingObject>().enabled = true;
             sound.SetActive(true);
         }
-
+        else if (fpsTargetDistance < enemyHeartbeatDistance)
+        {
+            heartSound.SetActive(true);
+        }
         else if (enemyWarningDistance < fpsTargetDistance)
         {
             sound.SetActive(false);
+        }
+        else if (enemyHeartbeatDistance < fpsTargetDistance)
+        {
+            heartSound.SetActive(false);
         }
         
         else{

@@ -19,6 +19,9 @@ public class WanderingEnemyAI : MonoBehaviour
     public Transform fpsWanderTarget;
     Rigidbody theRigidBody;
 
+    public float enemyHeartbeatDistance;
+    public GameObject heartSound;
+
     //public Transform stuckCheck;
     //Renderer myRenderer;
 
@@ -60,7 +63,14 @@ public class WanderingEnemyAI : MonoBehaviour
                 //attackPlease();
             }
         }
-        
+        else if (fpsTargetDistance < enemyHeartbeatDistance)
+        {
+            heartSound.SetActive(true);
+        }
+        else if (enemyHeartbeatDistance < fpsTargetDistance)
+        {
+            heartSound.SetActive(false);
+        }
         else{
 
             GameObject.Find("WanderingEnemy").GetComponent<AdvancedWanderAI>().enabled = true;
