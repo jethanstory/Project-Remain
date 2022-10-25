@@ -15,6 +15,8 @@ using UnityEngine.AI;
  
      public float multiplyBy;
      public float damping;
+
+     public GameObject heartSound;
     
     [Range(0, 500)] public float speed; //100
     [Range(1, 500)] public float walkRadius;
@@ -86,6 +88,7 @@ using UnityEngine.AI;
 
     public void RunFrom() 
     {
+        heartSound.SetActive(false);
         startTransform = transform;
          
         //temporarily point the object to look away from the player
