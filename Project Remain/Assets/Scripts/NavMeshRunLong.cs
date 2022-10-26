@@ -88,7 +88,6 @@ using UnityEngine.AI;
 
     public void RunFrom() 
     {
-        heartSound.SetActive(false);
         startTransform = transform;
          
         //temporarily point the object to look away from the player
@@ -119,6 +118,7 @@ using UnityEngine.AI;
  
          // And get it to head towards the found NavMesh position
         myNMagent.SetDestination(hit.position);
+        heartSound.SetActive(false);
     }
     private void OnTriggerEnter(Collider other) // to see when the player enters the collider
     {

@@ -1282,7 +1282,7 @@ MonoBehaviour:
   player: {fileID: 775212496}
   multiplyBy: 5
   damping: 2
-  heartSound: {fileID: 1351952112}
+  heartSound: {fileID: 328359442}
   speed: 20
   walkRadius: 5
 --- !u!1 &95515859
@@ -25315,7 +25315,7 @@ MonoBehaviour:
   player: {fileID: 775212496}
   multiplyBy: 5
   damping: 5
-  heartSound: {fileID: 0}
+  heartSound: {fileID: 328359442}
   speed: 20
   walkRadius: 5
 --- !u!114 &1907298989
