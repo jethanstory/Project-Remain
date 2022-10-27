@@ -88,7 +88,6 @@ using UnityEngine.AI;
 
     public void RunFrom() 
     {
-        
         startTransform = transform;
          
         //temporarily point the object to look away from the player
