@@ -2405,7 +2405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &410219500
 Light:
   m_ObjectHideFlags: 0
@@ -3128,6 +3128,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: a74e5a6b8afe5584dadf77a4a2245e84, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43d91cc396861f443b5574aef062e3d3, type: 2}
     - target: {fileID: 919132149155446097, guid: a74e5a6b8afe5584dadf77a4a2245e84, type: 3}
       propertyPath: m_Name
       value: tent_proto
@@ -18597,7 +18601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1554124968
 Light:
   m_ObjectHideFlags: 0
