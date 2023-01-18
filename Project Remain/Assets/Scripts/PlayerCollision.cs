@@ -13,7 +13,8 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "Enemy")
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(2);
+            Cursor.visible = true;
+            SceneManager.LoadScene("GameOver");
             Debug.Log("HIT");
             
         }

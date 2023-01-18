@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 298cfe84d100020479f304513f1aa005
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: dc2d3df71e9eef44a97894ffbe836ffe
+  - enabled: 1
     path: Assets/Scenes/NationalForest.unity
     guid: e0177b0de0e2d2744b89e4b0f12d519c
   - enabled: 1
