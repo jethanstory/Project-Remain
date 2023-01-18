@@ -14,6 +14,8 @@ public class ThrowingObject : MonoBehaviour
     public GameObject flare;
     public GameObject staticFlare;
 
+    public GameObject pickupSound;
+
     float range = 15f;
 
     public GameObject myHands; //reference to your hands/the position where you want your object to go
@@ -161,9 +163,11 @@ public class ThrowingObject : MonoBehaviour
     {
         if(other.gameObject.tag == "PickUp") //on the object you want to pick up set the tag to be anything, in this case "object"
         {
+            pickupSound.SetActive(false);
             canpickup = true;  //set the pick up bool to true
             ObjectIwantToPickUp = other.gameObject; //set the gameobject you collided with to one you can reference
             flareCount += 1;
+            pickupSound.SetActive(true);
             Destroy(ObjectIwantToPickUp);
         }
     }
