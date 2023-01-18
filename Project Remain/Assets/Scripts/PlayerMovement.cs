@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public float sprintTime = 7000; //1000 //300
+
+    bool canSprint;
+
 
     Vector3 velocity;
     bool isGrounded;
@@ -40,13 +44,22 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        if (Input.GetKey("left shift") && isGrounded)
+        if (Input.GetKey("left shift") && canSprint == true)//sprintTime >= 2) //== 3000) //>= 2) //&& isGrounded)
         {
             speed = 10f; //20
+            sprintTime += -20;
+            if (sprintTime < 0)
+                canSprint = false;
+
         }
         else
         {
             speed = 6f; //12
+
+            if (sprintTime < 7000)
+                sprintTime += 20; //1
+            else if (sprintTime == 7000)
+                canSprint = true;
         }
         velocity.y += gravity * Time.deltaTime;
 

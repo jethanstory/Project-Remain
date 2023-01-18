@@ -9202,6 +9202,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  sprintTime: 3000
 --- !u!143 &775212499
 CharacterController:
   m_ObjectHideFlags: 0
