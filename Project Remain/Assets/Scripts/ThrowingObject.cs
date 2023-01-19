@@ -114,24 +114,29 @@ public class ThrowingObject : MonoBehaviour
         flare.transform.SetParent(null);
         GameObject flareInstance = Instantiate(flare, spawnPoint.position, spawnPoint.rotation);
         flareInstance.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * range, ForceMode.Impulse);
-        flareInstance.GetComponent <ParticleSystem>().Play ();
+        //flareInstance.GetComponent <ParticleSystem>().Play (); //
+        
+        
         //flareInstance.GetComponent <AudioSource>().Play ();
 
-        ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
+        //ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission; //
+        
         //light = flareInstance.GetComponent <Light>();
 
         //audioSource = flareInstance.GetComponent<AudioSource>();
 
         //audioSource.SetActive(lightEnabled);
         //audioSource.Play();
-        em.enabled = true;
 
-        lightEnabled = !lightEnabled;
 
-        foreach (var light in lights)
-        {
-            light.SetActive(lightEnabled);
-        }
+        // em.enabled = true; //
+
+        // lightEnabled = !lightEnabled; //
+
+        // foreach (var light in lights) //
+        // {    //
+        //     light.SetActive(lightEnabled); //
+        // } //
         
         
         
@@ -151,6 +156,8 @@ public class ThrowingObject : MonoBehaviour
         //light.enabled = true;
         //light2.enabled = true;
         //light3.enabled = true;
+
+        Object.Destroy(flareInstance, 20.0f);
 
 
 
