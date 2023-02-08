@@ -45,6 +45,7 @@ public class AdvancedWanderAI : MonoBehaviour
     // Update is called once per frame
     void Update() //FixedUpdate()
     {
+        agent.speed = speed;
         if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
         {
             //agent.enabled = false;

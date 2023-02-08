@@ -46,6 +46,7 @@ public class FollowingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        agent.speed = speed;
         Quaternion rotation = Quaternion.LookRotation(player.position - transform.position);
         transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * damping);
         //float distance = Vector3.Distance(player.transform.position,transform.position);
