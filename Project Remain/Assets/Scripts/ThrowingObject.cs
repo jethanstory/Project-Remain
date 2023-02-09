@@ -49,7 +49,8 @@ public class ThrowingObject : MonoBehaviour
     bool hasItem; // a bool to see if you have an item in your hand
 
 
-
+    public GameObject textControls;
+    public float secondsCount; 
 
     void Start () {
         //light = GetComponent<Light> ();
@@ -68,6 +69,16 @@ public class ThrowingObject : MonoBehaviour
         
 
         if (flareCount > 0) { //canThrow == true
+
+            secondsCount += Time.deltaTime;
+
+            textControls.SetActive(true);
+            if (secondsCount > 5) 
+            {
+                //text.SetActive(false);
+                textControls.SetActive(false);
+            }
+     
             if (Input.GetMouseButtonDown(0)) // && canThrow == true
 
             {
