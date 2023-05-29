@@ -40,12 +40,18 @@ public class enemyAInoLight : MonoBehaviour
         if (fpsTargetDistance < enemyLookDistance) {
             myRenderer.material.color = Color.yellow;
 
-            GameObject.Find("longOne").GetComponent<AdvancedWanderAI>().enabled = false;
-            GameObject.Find("longOne").GetComponent<FollowingEnemy>().enabled = true;
+            // GameObject.Find("longOne").GetComponent<AdvancedWanderAI>().enabled = false;
+            // GameObject.Find("longOne").GetComponent<FollowingEnemy>().enabled = true;
+            gameObject.GetComponent<AdvancedWanderAI>().enabled = false;
+            gameObject.GetComponent<FollowingEnemy>().enabled = true;
+
             lookAtPlayer();
             if (fpsTargetDistance < attackDistance) {
                 myRenderer.material.color = Color.red;
-                GameObject.Find("longOne").GetComponent<AttackPlayer>().enabled = true;
+
+                // GameObject.Find("longOne").GetComponent<AttackPlayer>().enabled = true;
+
+                gameObject.GetComponent<AttackPlayer>().enabled = true;
                 //attackPlease();
             }
         }
@@ -69,8 +75,9 @@ public class enemyAInoLight : MonoBehaviour
         
         else{
             myRenderer.material.color = Color.blue;
-            GameObject.Find("longOne").GetComponent<AdvancedWanderAI>().enabled = true;
-             gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            // GameObject.Find("longOne").GetComponent<AdvancedWanderAI>().enabled = true;
+            gameObject.GetComponent<AdvancedWanderAI>().enabled = true;
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
             //enemyLight.color = Color.white;
         }
         

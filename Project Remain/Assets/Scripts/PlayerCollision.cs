@@ -50,8 +50,8 @@ private void OnTriggerEnter(Collider other) // to see when the player enters the
 
             Debug.Log("HIT");
             hasCollided = true;
-            //ObjectIwantToDestroy = other.gameObject; //set the gameobject you collided with to one you can reference
-            //Destroy(ObjectIwantToDestroy);
+            ObjectIwantToDestroy = other.gameObject; //set the gameobject you collided with to one you can reference
+            Destroy(ObjectIwantToDestroy);
         }
     }  
 }
