@@ -9,13 +9,16 @@ public class LoadNextPlayerTestScr : MonoBehaviour
     public GameObject fpsPlayerObjects;
     public GameObject gameOverCanvas;
     public GameObject rangerIntroCanvas;
-    //public GameObject wanderEnemy;
-    //public GameObject longOneEnemy;
+    public GameObject wanderEnemy;
+    public GameObject longOneEnemy;
+
+    public GameObject wanderEnemyNext;
+    public GameObject longOneEnemyNext;
     public float secondsCount;
     // Start is called before the first frame update
     void Start()
     {
-        
+
         //Destroy(fpsPlayer);
 
     }
@@ -34,23 +37,27 @@ public class LoadNextPlayerTestScr : MonoBehaviour
             gameOverCanvas.SetActive(true);
             fpsPlayerObjects.SetActive(true);
             fpsPlayerObjects.transform.position = fpsPlayer.transform.position;
-            if (secondsCount > 2) 
+            if (secondsCount > 2)
             {
                 rangerIntroCanvas.SetActive(true);
                 gameOverCanvas.SetActive(false);
                 fpsPlayer.SetActive(false);
                 //Destroy(fpsPlayer);
                 fpsPlayerRanger.SetActive(true);
-                if (secondsCount > 3) 
+                wanderEnemy.SetActive(false);
+                wanderEnemyNext.SetActive(true);
+                longOneEnemy.SetActive(false);
+                longOneEnemyNext.SetActive(true);
+                if (secondsCount > 3)
                 {
-                    
+
                     rangerIntroCanvas.SetActive(false);
                     //Destroy(wanderEnemy);
                     //Destroy(longOneEnemy);
                 }
             }
-            
-            
+
+
         }
     }
 }
